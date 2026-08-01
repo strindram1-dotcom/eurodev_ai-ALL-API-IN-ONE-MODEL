@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EuroDev AI — One workspace for every AI tool you build with</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================= LANDING VIEW ======================= -->
+<div id="view-landing" class="view view--active">
+
+  <nav class="nav">
+    <div class="nav__brand">
+      <span class="nav__mark">ED</span>
+      <span class="nav__name">EuroDev<span class="accent">AI</span></span>
+    </div>
+    <div class="nav__links">
+      <a href="#features">Features</a>
+      <a href="#problem">Why it exists</a>
+      <a href="#outcomes">Outcomes</a>
+    </div>
+    <div class="nav__actions">
+      <button class="btn btn--ghost" data-open-auth="login">Sign in</button>
+      <button class="btn btn--primary" data-open-auth="signup">Get started</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__copy">
+      <p class="eyebrow">Unified AI workspace</p>
+      <h1>Stop switching tabs. <br>Start shipping.</h1>
+      <p class="hero__sub">EuroDev AI brings your chat assistant, code generator, document analysis, project tracker, file storage and automation agents into one connected workspace — built for developers, students, freelancers and teams who build fast.</p>
+      <div class="hero__cta">
+        <button class="btn btn--primary btn--lg" data-open-auth="signup">Create your workspace</button>
+        <a href="#problem" class="btn btn--text">See the problem it solves ↓</a>
+      </div>
+    </div>
+
+    <div class="hero__diagram" aria-hidden="true">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" id="convergence-svg">
+        <defs>
+          <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2979ff"/>
+            <stop offset="100%" stop-color="#00e5ff"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="260" cy="230" r="120" fill="url(#coreGlow)"/>
+
+        <!-- connecting lines -->
+        <g class="conv-lines" stroke="url(#lineGrad)" stroke-width="1.6" fill="none">
+          <path d="M90,80 C160,120 200,160 260,230"/>
+          <path d="M430,70 C370,110 320,160 260,230"/>
+          <path d="M60,260 C130,250 190,240 260,230"/>
+          <path d="M460,270 C390,255 320,240 260,230"/>
+          <path d="M150,400 C190,340 220,290 260,230"/>
+          <path d="M380,400 C340,340 300,290 260,230"/>
+        </g>
+
+        <!-- traveling pulses -->
+        <g class="conv-pulses" fill="#e8f6ff">
+          <circle r="3.2" class="pulse pulse--1"><animateMotion dur="2.6s" repeatCount="indefinite" path="M90,80 C160,120 200,160 260,230"/></circle>
+          <circle r="3.2" class="pulse pulse--2"><animateMotion dur="3.1s" repeatCount="indefinite" path="M430,70 C370,110 320,160 260,230"/></circle>
+          <circle r="3.2" class="pulse pulse--3"><animateMotion dur="2.2s" repeatCount="indefinite" path="M60,260 C130,250 190,240 260,230"/></circle>
+          <circle r="3.2" class="pulse pulse--4"><animateMotion dur="2.9s" repeatCount="indefinite" path="M460,270 C390,255 320,240 260,230"/></circle>
+          <circle r="3.2" class="pulse pulse--5"><animateMotion dur="2.4s" repeatCount="indefinite" path="M150,400 C190,340 220,290 260,230"/></circle>
+          <circle r="3.2" class="pulse pulse--6"><animateMotion dur="3.4s" repeatCount="indefinite" path="M380,400 C340,340 300,290 260,230"/></circle>
+        </g>
+
+        <!-- tool nodes -->
+        <g class="conv-node" transform="translate(90,80)">
+          <circle r="26"/><text y="5">Chat</text>
+        </g>
+        <g class="conv-node" transform="translate(430,70)">
+          <circle r="26"/><text y="5">Code</text>
+        </g>
+        <g class="conv-node" transform="translate(60,260)">
+          <circle r="26"/><text y="5">Docs</text>
+        </g>
+        <g class="conv-node" transform="translate(460,270)">
+          <circle r="26"/><text y="5">Agents</text>
+        </g>
+        <g class="conv-node" transform="translate(150,400)">
+          <circle r="26"/><text y="5">Files</text>
+        </g>
+        <g class="conv-node" transform="translate(380,400)">
+          <circle r="26"/><text y="5">Tasks</text>
+        </g>
+
+        <!-- core -->
+        <g class="conv-core" transform="translate(260,230)">
+          <circle r="46"/>
+          <text y="-2">EuroDev</text>
+          <text y="16">AI</text>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <section class="band" id="problem">
+    <div class="band__inner">
+      <p class="eyebrow">Problem statement</p>
+      <h2>Every extra tab is a small tax on your focus.</h2>
+      <p>Developers and teams juggle a chat assistant, a code editor, a document reader, cloud storage and a task tracker as five separate apps. Context gets lost between them, and the switching itself becomes the slowest part of the job. EuroDev AI puts all five behind a single sign-in.</p>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <p class="eyebrow center">What's inside</p>
+    <h2 class="center">One workspace, every tool</h2>
+    <div class="features__grid">
+
+      <article class="feature-card">
+        <div class="feature-card__icon">💬</div>
+        <h3>AI Chat Assistant</h3>
+        <p>Natural conversation for planning, debugging and explaining — with full history kept against your account.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">{ }</div>
+        <h3>AI Code Generator</h3>
+        <p>Describe what you need in plain language and get a working starting point in the language of your choice.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">📄</div>
+        <h3>Document Analysis</h3>
+        <p>Upload a file and pull structured answers out of it instead of reading it end to end.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">📋</div>
+        <h3>Project Management</h3>
+        <p>Track projects and tasks in one board, without a separate tracker subscription.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">⚙️</div>
+        <h3>AI Agents</h3>
+        <p>Hand off repetitive, rule-based work to an agent instead of doing it by hand every time.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">☁️</div>
+        <h3>File Storage</h3>
+        <p>Keep the files behind your projects in the same place you do the work, backed by cloud storage.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">🔐</div>
+        <h3>Secure Authentication</h3>
+        <p>Firebase-backed sign-in keeps your workspace private to you.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon">📊</div>
+        <h3>Dashboard</h3>
+        <p>One overview of what you've actually built — your projects, files and activity, not sample data.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="band band--alt" id="outcomes">
+    <div class="band__inner">
+      <p class="eyebrow">Expected outcome</p>
+      <h2>What you leave with</h2>
+      <ul class="outcome-list">
+        <li>Generate code with AI assistance, in context, without leaving the workspace.</li>
+        <li>Analyze documents and get direct answers instead of manual reading.</li>
+        <li>Manage projects and files from one centralized workspace.</li>
+        <li>Store data on a secure cloud platform built on Firebase.</li>
+        <li>Move faster with a workflow that isn't split across five apps.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>EuroDev AI</span>
+    <span class="footer__muted">Built for developers, students, freelancers, startups and businesses.</span>
+  </footer>
+</div>
+
+<!-- ======================= AUTH VIEW ======================= -->
+<div id="view-auth" class="view">
+  <div class="auth">
+    <div class="auth__card">
+      <button class="auth__back" id="backToLanding">← Back</button>
+      <div class="nav__brand auth__brand">
+        <span class="nav__mark">ED</span>
+        <span class="nav__name">EuroDev<span class="accent">AI</span></span>
+      </div>
+
+      <div class="auth__tabs">
+        <button class="auth__tab auth__tab--active" data-auth-tab="login">Sign in</button>
+        <button class="auth__tab" data-auth-tab="signup">Create account</button>
+      </div>
+
+      <form id="loginForm" class="auth__form">
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input type="password" name="password" placeholder="••••••••" required minlength="6">
+        </label>
+        <p class="form-error" id="loginError"></p>
+        <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+      </form>
+
+      <form id="signupForm" class="auth__form auth__form--hidden">
+        <label>Full name
+          <input type="text" name="fullname" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input type="password" name="password" placeholder="At least 6 characters" required minlength="6">
+        </label>
+        <p class="form-error" id="signupError"></p>
+        <button type="submit" class="btn btn--primary btn--block">Create workspace</button>
+      </form>
+
+      <p class="auth__note">Authenticated with Firebase Authentication. Your workspace and data stay tied to this account only.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= APP SHELL ======================= -->
+<div id="view-app" class="view">
+  <div class="shell">
+
+    <aside class="sidebar">
+      <div class="nav__brand sidebar__brand">
+        <span class="nav__mark">ED</span>
+        <span class="nav__name">EuroDev<span class="accent">AI</span></span>
+      </div>
+
+      <nav class="sidebar__nav">
+        <button class="sidebar__link sidebar__link--active" data-panel="dashboard"><span>▣</span>Dashboard</button>
+        <button class="sidebar__link" data-panel="chat"><span>💬</span>AI Chat</button>
+        <button class="sidebar__link" data-panel="code"><span>{ }</span>Code Generator</button>
+        <button class="sidebar__link" data-panel="docs"><span>📄</span>Document Analysis</button>
+        <button class="sidebar__link" data-panel="projects"><span>📋</span>Projects</button>
+        <button class="sidebar__link" data-panel="agents"><span>⚙️</span>AI Agents</button>
+        <button class="sidebar__link" data-panel="files"><span>☁️</span>File Storage</button>
+        <button class="sidebar__link" data-panel="settings"><span>👤</span>Settings</button>
+      </nav>
+
+      <div class="sidebar__user">
+        <div class="sidebar__avatar" id="sidebarAvatar">U</div>
+        <div class="sidebar__userinfo">
+          <span class="sidebar__username" id="sidebarUserName">—</span>
+          <span class="sidebar__useremail" id="sidebarUserEmail">—</span>
+        </div>
+        <button class="sidebar__logout" id="logoutBtn" title="Log out">⎋</button>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <!-- DASHBOARD -->
+      <section class="panel panel--active" data-panel-content="dashboard">
+        <div class="panel__head">
+          <h2>Welcome back, <span id="dashboardGreetName">there</span></h2>
+          <p class="panel__sub">Here's what's actually in your workspace right now.</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span class="stat-card__value" id="statProjects">0</span>
+            <span class="stat-card__label">Active projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__value" id="statTasks">0</span>
+            <span class="stat-card__label">Open tasks</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__value" id="statFiles">0</span>
+            <span class="stat-card__label">Stored files</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__value" id="statDocs">0</span>
+            <span class="stat-card__label">Analyzed documents</span>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <button class="btn btn--outline" data-panel="chat">Open AI Chat</button>
+          <button class="btn btn--outline" data-panel="code">Generate code</button>
+          <button class="btn btn--outline" data-panel="projects">New project</button>
+          <button class="btn btn--outline" data-panel="files">Upload a file</button>
+        </div>
+
+        <div class="dashboard-empty" id="dashboardEmptyState">
+          <p>Your workspace is empty so far — nothing has been faked here. Create a project, start a chat, or upload a file to see it reflected above.</p>
+        </div>
+      </section>
+
+      <!-- AI CHAT -->
+      <section class="panel" data-panel-content="chat">
+        <div class="panel__head">
+          <h2>AI Chat Assistant</h2>
+          <p class="panel__sub">Your messages are kept for this session. Connect an AI engine on the backend to receive live replies.</p>
+        </div>
+
+        <div class="chat">
+          <div class="chat__log" id="chatLog">
+            <div class="chat__placeholder" id="chatEmptyState">No messages yet. Say something to start the conversation.</div>
+          </div>
+          <form class="chat__form" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Type a message…" autocomplete="off" required>
+            <button type="submit" class="btn btn--primary">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- CODE GENERATOR -->
+      <section class="panel" data-panel-content="code">
+        <div class="panel__head">
+          <h2>AI Code Generator</h2>
+          <p class="panel__sub">Describe what you want to build. Output appears here once wired to your AI engine.</p>
+        </div>
+
+        <form class="code-form" id="codeForm">
+          <label>Language
+            <select id="codeLang">
+              <option>JavaScript</option>
+              <option>Python</option>
+              <option>HTML/CSS</option>
+              <option>Java</option>
+              <option>C++</option>
+              <option>SQL</option>
+            </select>
+          </label>
+          <label>Describe what you need
+            <textarea id="codePrompt" rows="4" placeholder="e.g. a function that validates an email address" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Generate</button>
+        </form>
+
+        <div class="code-history" id="codeHistory">
+          <p class="empty-note" id="codeEmptyState">Your generation requests will be listed here as you submit them.</p>
+        </div>
+      </section>
+
+      <!-- DOCUMENT ANALYSIS -->
+      <section class="panel" data-panel-content="docs">
+        <div class="panel__head">
+          <h2>Document Analysis</h2>
+          <p class="panel__sub">Upload a document to queue it for analysis.</p>
+        </div>
+
+        <label class="dropzone" id="docDropzone">
+          <input type="file" id="docInput" multiple hidden>
+          <span class="dropzone__icon">📄</span>
+          <span>Click to choose a file, or drag one here</span>
+        </label>
+
+        <ul class="file-list" id="docList">
+          <li class="empty-note" id="docEmptyState">No documents uploaded yet.</li>
+        </ul>
+      </section>
+
+      <!-- PROJECT MANAGEMENT -->
+      <section class="panel" data-panel-content="projects">
+        <div class="panel__head">
+          <h2>Project Management</h2>
+          <p class="panel__sub">Create and track your own projects and tasks.</p>
+        </div>
+
+        <form class="inline-form" id="projectForm">
+          <input type="text" id="projectName" placeholder="New project name" required>
+          <button type="submit" class="btn btn--primary">Add project</button>
+        </form>
+
+        <div class="project-board" id="projectBoard">
+          <p class="empty-note" id="projectEmptyState">No projects yet. Add one above to get started.</p>
+        </div>
+      </section>
+
+      <!-- AI AGENTS -->
+      <section class="panel" data-panel-content="agents">
+        <div class="panel__head">
+          <h2>AI Agents</h2>
+          <p class="panel__sub">Configure agents to automate repetitive tasks in your workspace.</p>
+        </div>
+
+        <form class="inline-form" id="agentForm">
+          <input type="text" id="agentName" placeholder="Agent name, e.g. Daily report agent" required>
+          <input type="text" id="agentTask" placeholder="What should it automate?" required>
+          <button type="submit" class="btn btn--primary">Create agent</button>
+        </form>
+
+        <div class="agent-list" id="agentList">
+          <p class="empty-note" id="agentEmptyState">No agents configured yet.</p>
+        </div>
+      </section>
+
+      <!-- FILE STORAGE -->
+      <section class="panel" data-panel-content="files">
+        <div class="panel__head">
+          <h2>File Storage</h2>
+          <p class="panel__sub">Files you add here are listed with their real name and size.</p>
+        </div>
+
+        <label class="dropzone" id="fileDropzone">
+          <input type="file" id="fileInput" multiple hidden>
+          <span class="dropzone__icon">☁️</span>
+          <span>Click to choose files, or drag them here</span>
+        </label>
+
+        <div class="storage-meter">
+          <div class="storage-meter__bar"><div class="storage-meter__fill" id="storageFill"></div></div>
+          <span id="storageLabel">0 B used</span>
+        </div>
+
+        <ul class="file-list" id="fileList">
+          <li class="empty-note" id="fileEmptyState">No files stored yet.</li>
+        </ul>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="panel" data-panel-content="settings">
+        <div class="panel__head">
+          <h2>Settings</h2>
+          <p class="panel__sub">Your account details.</p>
+        </div>
+
+        <form class="settings-form" id="settingsForm">
+          <label>Full name
+            <input type="text" id="settingsName" required>
+          </label>
+          <label>Email
+            <input type="email" id="settingsEmail" required>
+          </label>
+          <button type="submit" class="btn btn--primary">Save changes</button>
+          <p class="form-success" id="settingsSaved">Saved.</p>
+        </form>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
